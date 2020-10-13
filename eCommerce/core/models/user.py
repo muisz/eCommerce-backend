@@ -25,3 +25,10 @@ class Store(models.Model):
     name = models.CharField(max_length=100)
     address = models.TextField()
     pict = models.ImageField(upload_to="pict/%Y/%m/", null=True)
+
+class Address(models.Model):
+    user_id = models.IntegerField()
+    province = models.CharField(max_length=100)
+    district = models.CharField(max_length=100)
+    subDistrict = models.CharField(max_length=100)
+    postCode = models.CharField(max_length=100)
