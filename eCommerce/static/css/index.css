@@ -1,0 +1,42 @@
+.header{
+    height: 100px;
+    background-color: #71ab71;
+}
+
+.h-1{
+    width: 80%;
+    margin: auto;
+}
+
+.upper {
+    border: 1px solid black;
+}
+
+.nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav ul li{
+    margin: 5px;
+}
+
+.nav ul li a{
+    color: black;
+}
+.grid-containers12{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.logo12 {
+    border: 1px solid black;
+}
+
+.search-container12{
+    border: 1px solid black
+}
+
+.down {
+    border: 1px solid red;
+}
