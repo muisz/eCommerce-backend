@@ -8,11 +8,12 @@ class Item(models.Model):
     stock = models.IntegerField()
     price = models.FloatField()
     desc = models.TextField()
+    category = models.CharField(max_length=100)
     date_created = models.DateField(auto_now_add=True)
     date_edited = models.DateField(null=True)
 
 class Category(models.Model):
-    item_id = models.IntegerField()
+    store_id = models.IntegerField()
     category = models.CharField(max_length=100)
 
 class ItemSpecification(models.Model):
@@ -30,7 +31,7 @@ class ItemReview(models.Model):
     user_id = models.IntegerField()
     review = models.TextField()
     rating = models.FloatField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
 
 class ItemReviewPictures(models.Model):
     review_id = models.IntegerField()

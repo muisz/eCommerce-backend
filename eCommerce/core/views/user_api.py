@@ -126,3 +126,20 @@ class RegisterUser(APIView):
 
         except:
             return Response({"error":"Bad Request"}, status = 400)
+
+class GetStore(APIView):
+    def get(self, request):
+        try:
+            stores = Store.objects.all().order_by('name')
+            result = []
+            for store in stores:
+                temp = {
+                    "name": store.name,
+                    "address": store.address,
+                    "pict": str(store.pict)
+                }
+                result.append(temp)
+            return Response({"data":result})
+
+        except:
+            return Response({"error":"data not found!"}, status = 404)
